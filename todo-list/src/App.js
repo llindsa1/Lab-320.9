@@ -46,6 +46,15 @@ function App() {
         />
         {todo.text}
 
+        <button
+        onClick={() => {
+          const newText = prompt('Edit Todo', todo.text);
+          if (newText) editTodo(index, newText);
+    
+        }}
+        >
+          Edit
+        </button>
         
        </li>
       ))}

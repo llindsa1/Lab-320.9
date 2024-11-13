@@ -23,4 +23,9 @@ function App() {
     )
     );
   };
+  const editTodo = (index, newText) => {
+    setTodos(
+      todos.map((todo, i) => (i === index ? {...todo, text: newText } : todo))
+    );
+  };
   

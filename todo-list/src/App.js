@@ -55,9 +55,18 @@ function App() {
         >
           Edit
         </button>
-        
+
+        <button
+        onClick={() => deleteTodo(index)}
+          disabled={!todo.completed}
+          >
+          Delete
+          </button>
+
        </li>
       ))}
     </ul>
   </div>
- ) 
+ );
+} 
+export default App;

@@ -7,8 +7,8 @@ import App from './App';
 ReactDOM.render(
   <React.StrictMode>
     <App />
-  </React.StrictMode>
-Document.getElementById('root')
+  </React.StrictMode>,
+document.getElementById('root')
 );
 
 

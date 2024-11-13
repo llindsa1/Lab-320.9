@@ -28,4 +28,27 @@ function App() {
       todos.map((todo, i) => (i === index ? {...todo, text: newText } : todo))
     );
   };
-  
+ return (
+  <div>
+    <h1>Todo List</h1>
+
+    <input type="text" value={formData} onChange={handleInputChange} />
+    <button onClick={addTodo}> Add Todo</button>
+
+    <ul>
+      {todos.map((todo, index) => (
+       <li key={index} style={{ textDecoration: todo.completed ? 'line-through' : 'none'}}>
+
+        <input
+        type="checkbox"
+        checked={todo.completed}
+        onChange={() => toggleComplete(index)}
+        />
+        {todo.text}
+
+        
+       </li>
+      ))}
+    </ul>
+  </div>
+ ) 
